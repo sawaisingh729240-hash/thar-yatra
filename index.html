@@ -1,167 +1,240 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>THARYATRA - Jaisalmer Tour & Travels</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-    body { background-color: #f9f9f9; color: #333; }
-    
-    /* Header */
-    header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-    .logo { font-size: 22px; font-weight: bold; color: #e67e22; }
-    nav a { margin: 0 10px; text-decoration: none; color: #555; font-size: 14px; }
-    .nav-btns a { padding: 8px 15px; border-radius: 5px; text-decoration: none; font-size: 13px; font-weight: bold; }
-    .btn-call { background: #f39c12; color: white; margin-right: 5px; }
-    .btn-wa { background: #25d366; color: white; }
-
-    /* Hero Section */
-    .hero { 
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                  url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 0 20px;
-    }
-    .hero h1 { font-size: 32px; color: #f1c40f; margin-bottom: 10px; text-transform: uppercase; }
-    .hero p { font-size: 16px; margin-bottom: 20px; max-width: 600px; }
-    .hero-btns .btn { padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; margin: 5px; display: inline-block; }
-    .btn-orange { background: #e67e22; color: white; }
-    .btn-green { background: #25d366; color: white; }
-
-    /* Intro */
-    .intro { padding: 30px 5%; text-align: center; background: #fffdf5; }
-    .intro h2 { font-size: 22px; margin-bottom: 10px; color: #2c3e50; }
-    .intro p { color: #666; font-size: 14px; max-width: 800px; margin: 0 auto; line-height: 1.6; }
-
-    /* Section Grid */
-    .section-title { text-align: center; margin: 40px 0 20px; font-size: 24px; color: #2c3e50; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 0 5% 40px; }
-    .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08); transition: 0.3s; }
-    .card:hover { transform: translateY(-5px); }
-    .card img { width: 100%; height: 180px; object-fit: cover; }
-    .card-content { padding: 15px; }
-    .card-content h3 { font-size: 18px; margin-bottom: 8px; color: #d35400; }
-    .card-content p { font-size: 13px; color: #666; margin-bottom: 12px; }
-    .card-content a { color: #e67e22; text-decoration: none; font-weight: bold; font-size: 13px; }
-
-    /* Booking Form */
-    .booking { background: white; padding: 30px; border-radius: 10px; max-width: 500px; margin: 0 auto 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-    .booking h3 { text-align: center; color: #d35400; margin-bottom: 15px; }
-    .form-group { margin-bottom: 15px; }
-    .form-group label { display: block; font-size: 12px; margin-bottom: 5px; color: #555; }
-    .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
-    .btn-submit { width: 100%; padding: 12px; background: #25d366; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THARYATRA - Tour & Travels | Jaisalmer Packages</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-  <!-- Header -->
-  <header>
-    <div class="logo">⛺ THARYATRA</div>
-    <nav>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Locations</a>
-    </nav>
-    <div class="nav-btns">
-      <a href="tel:+919999999999" class="btn-call">📞 Call</a>
-      <a href="https://wa.me/919999999999" class="btn-wa">WhatsApp</a>
-    </div>
-  </header>
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-campground text-2xl text-amber-600"></i>
+                <a href="#" class="text-2xl font-bold text-amber-700 tracking-wide">THARYATRA</a>
+            </div>
+            <nav class="hidden md:flex space-x-6 font-medium text-gray-700">
+                <a href="#about" class="hover:text-amber-600">About</a>
+                <a href="#services" class="hover:text-amber-600">Services</a>
+                <a href="#places" class="hover:text-amber-600">Locations</a>
+                <a href="#book" class="hover:text-amber-600">Book Now</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <a href="tel:+917877858851" class="bg-gray-100 text-gray-800 px-3 py-2 rounded-lg font-semibold text-sm flex items-center hover:bg-gray-200">
+                    <i class="fa-solid fa-phone text-amber-600 mr-2"></i> Call
+                </a>
+                <a href="https://wa.me/917877858851?text=Hello%20Sawai%20Singh%20Ji,%20I%20want%20to%20know%20more%20about%20Jaisalmer%20tour%20packages." target="_blank" class="bg-green-500 text-white px-3 py-2 rounded-lg font-semibold text-sm flex items-center hover:bg-green-600">
+                    <i class="fa-brands fa-whatsapp text-lg mr-1"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Explore Jaisalmer With THARYATRA</h1>
-    <p>Best Desert Camps, Luxury Resorts, Camel & Jeep Safari Packages at Best Prices!</p>
-    <div class="hero-btns">
-      <a href="#book" class="btn btn-orange">Custom Package Request</a>
-      <a href="https://wa.me/919999999999" class="btn btn-green">Direct Chat</a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-[80vh] flex items-center justify-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1600&q=80');">
+        <div class="text-center px-4 max-w-3xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-amber-400">Explore Jaisalmer With THARYATRA</h1>
+            <p class="text-lg md:text-xl mb-8">Best Desert Camps, Luxury Resorts, Camel & Jeep Safari Packages at Best Prices!</p>
+            <div class="flex justify-center gap-4">
+                <a href="#book" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-bold shadow-lg transition">Custom Package Request</a>
+                <a href="https://wa.me/917877858851?text=Hello%20Sawai%20Singh%20Ji,%20I%20want%20to%20know%20more%20about%20Jaisalmer%20tour%20packages." target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold shadow-lg transition flex items-center">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Direct Chat
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <!-- Intro -->
-  <section class="intro">
-    <h2>Welcome to THARYATRA – Tour & Travels</h2>
-    <p>Aapka Jaisalmer me swagat hai! Sawai Singh Sodha ke saath aapki trip hogi bilkul memorable. Hum aapko provide karate hain: Best Luxury Hotels, Swiss Tents, Desert Camps, Romantic Sunset Camel Safari, aur Thrilling Jeep Safari - Sabhi aapke budget ke hisab se customized!</p>
-  </section>
+    <!-- Business Intro -->
+    <section id="about" class="py-12 bg-amber-50">
+        <div class="max-w-5xl mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-3">Welcome to THARYATRA - Tour & Travels</h2>
+            <p class="text-gray-600 leading-relaxed text-lg">
+                Aapka Jaisalmer me swagat hai! Sawai Singh Sodha ke saath aapki trip hogi bilkul memorable. Hum aapko provide karate hain: Best Luxury Hotels, Swiss Tents, Desert Camps, Romantic Sunset Camel Safari, aur Thrilling Jeep Safari - Sabhi aapke budget ke hisab se customized!
+            </p>
+        </div>
+    </section>
 
-  <!-- Premium Services -->
-  <h2 class="section-title">Our Premium Services</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Hotel & Luxury Resorts">
-      <div class="card-content">
-        <h3>Hotel & Luxury Resorts</h3>
-        <p>Fort view rooms, budget-friendly hotels, aur luxury heritage resorts best deal price par.</p>
-        <a href="#">Enquire Now →</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80" alt="Desert Camps & Tents">
-      <div class="card-content">
-        <h3>Desert Camps & Tents</h3>
-        <p>Sam Sand Dunes me Swiss Tents, Rajasthani Cultural Program, Folk Dance & Buffet Dinner.</p>
-        <a href="#">Enquire Now →</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Jeep & Camel Safari">
-      <div class="card-content">
-        <h3>Jeep & Camel Safari</h3>
-        <p>Dunes par thrilling Dune Bashing Jeep Safari aur peaceful Sunset Camel Ride.</p>
-        <a href="#">Enquire Now →</a>
-      </div>
-    </div>
-  </div>
+    <!-- Services Section -->
+    <section id="services" class="py-16 max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Our Premium Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotel Resort" class="h-48 w-full object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-amber-700 mb-2">Hotel & Luxury Resorts</h3>
+                    <p class="text-gray-600 text-sm mb-4">Fort view rooms, budget-friendly hotels, aur luxury heritage resorts best deal price par.</p>
+                    <a href="#book" class="text-amber-600 font-bold hover:underline">Enquire Now &rarr;</a>
+                </div>
+            </div>
 
-  <!-- Popular Sightseeing -->
-  <h2 class="section-title">Popular Sightseeing Locations in Jaisalmer</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1609825488888-3a766db05542?auto=format&fit=crop&w=800&q=80" alt="Jaisalmer Fort">
-      <div class="card-content">
-        <h3>Jaisalmer Fort (Sonar Qila)</h3>
-        <p>Duniya ka lajawab living fort.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Sam Sand Dunes">
-      <div class="card-content">
-        <h3>Sam Sand Dunes</h3>
-        <p>Desert camping aur sunset views.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80" alt="Gadisar Lake">
-      <div class="card-content">
-        <h3>Gadisar Lake</h3>
-        <p>Boating aur peaceful lake views.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80" alt="Tanot Mata Mandir">
-      <div class="card-content">
-        <h3>Tanot Mata Mandir</h3>
-        <p>Indo-Pak border ke paas prasiddh mandir.</p>
-      </div>
-    </div>
-  </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80" alt="Desert Camp" class="h-48 w-full object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-amber-700 mb-2">Desert Camps & Tents</h3>
+                    <p class="text-gray-600 text-sm mb-4">Sam Sand Dunes me Swiss Tents, Rajasthani Cultural Program, Folk Dance & Buffet Dinner.</p>
+                    <a href="#book" class="text-amber-600 font-bold hover:underline">Enquire Now &rarr;</a>
+                </div>
+            </div>
 
-  <!-- Booking Form -->
-  <div class="booking" id="book">
-    <h3>Book / Get Price Quote</h3>
-    <form>
-      <div class="form-group">
-        <label>Aapka Naam (Your Name):</label>
-        <input type="text" placeholder="Enter full name">
-      </div>
-      <div class="form-group">
-        <label>Total Persons / Guests:</label>
-        <input type="number" placeholder="e.g. 4">
-      </div>
-      <button type="submit" class="btn-submit">💬 Send Inquiry on WhatsApp</button>
-    </form>
-  </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80" alt="Jeep & Camel Safari" class="h-48 w-full object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-amber-700 mb-2">Jeep & Camel Safari</h3>
+                    <p class="text-gray-600 text-sm mb-4">Dunes par thrilling Dune Bashing Jeep Safari aur peaceful Sunset Camel Ride.</p>
+                    <a href="#book" class="text-amber-600 font-bold hover:underline">Enquire Now &rarr;</a>
+                </div>
+            </div>
 
+        </div>
+    </section>
+
+    <!-- Top Locations Section -->
+    <section id="places" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Popular Sightseeing Locations in Jaisalmer</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Jaisalmer_Fort_1.jpg/800px-Jaisalmer_Fort_1.jpg" class="h-48 w-full object-cover" alt="Jaisalmer Fort">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg text-gray-800">Jaisalmer Fort (Sonar Qila)</h4>
+                        <p class="text-xs text-gray-500 mt-1">Duniya ka lajawab living fort.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" class="h-48 w-full object-cover" alt="Sam Sand Dunes">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg text-gray-800">Sam Sand Dunes</h4>
+                        <p class="text-xs text-gray-500 mt-1">Desert camping aur sunset views.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Gadi_Sagar_Lake%2C_Jaisalmer.jpg/800px-Gadi_Sagar_Lake%2C_Jaisalmer.jpg" class="h-48 w-full object-cover" alt="Gadisar Lake">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg text-gray-800">Gadisar Lake</h4>
+                        <p class="text-xs text-gray-500 mt-1">Boating aur peaceful lake views.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Tanot_Mata_Temple%2C_Jaisalmer.jpg/800px-Tanot_Mata_Temple%2C_Jaisalmer.jpg" class="h-48 w-full object-cover" alt="Tanot Mata Mandir">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg text-gray-800">Tanot Mata Mandir</h4>
+                        <p class="text-xs text-gray-500 mt-1">Indo-Pak border ke paas prasiddh mandir.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Booking / WhatsApp Lead Form -->
+    <section id="book" class="py-16 max-w-3xl mx-auto px-4">
+        <div class="bg-white p-8 rounded-xl shadow-lg border border-amber-200">
+            <h2 class="text-2xl font-bold text-center text-amber-800 mb-2">Book / Get Price Quote</h2>
+            <p class="text-center text-gray-600 text-sm mb-6">Form bharein aur direct WhatsApp par exact rate jaanein!</p>
+            
+            <form id="tourForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold mb-1">Your Name:</label>
+                    <input type="text" id="custName" placeholder="Enter full name" required class="w-full border rounded-lg p-3 focus:outline-amber-600">
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">Arrival Date:</label>
+                        <input type="date" id="tourDate" required class="w-full border rounded-lg p-3 focus:outline-amber-600">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">Total Persons / Guests:</label>
+                        <input type="number" id="guestCount" placeholder="e.g. 4" min="1" required class="w-full border rounded-lg p-3 focus:outline-amber-600">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold mb-1">Service Required:</label>
+                    <select id="serviceType" class="w-full border rounded-lg p-3 focus:outline-amber-600">
+                        <option value="Complete Package (Hotel + Camp + Safari)">Complete Full Package</option>
+                        <option value="Desert Camp & Tents Only">Desert Camp & Swiss Tents</option>
+                        <option value="Hotel / Resort Booking Only">Hotel / Resort Booking</option>
+                        <option value="Jeep & Camel Safari Only">Jeep & Camel Safari</option>
+                    </select>
+                </div>
+
+                <button type="button" onclick="sendToWhatsApp()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg flex justify-center items-center gap-2 text-lg transition">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> Send Inquiry on WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h3 class="text-2xl font-bold text-amber-500 mb-2">THARYATRA</h3>
+                <p class="text-gray-400 text-sm">Tour & Travels - Your trusted guide in Jaisalmer, Rajasthan.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-2">Owner & Contact</h4>
+                <p class="text-gray-300"><strong>Owner:</strong> Sawai Singh Sodha</p>
+                <p class="text-gray-300"><strong>Mobile:</strong> +91 7877858851</p>
+                <p class="text-gray-300"><strong>Location:</strong> Jaisalmer, Rajasthan</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-2">Direct Connect</h4>
+                <a href="https://wa.me/917877858851?text=Hello%20Sawai%20Singh%20Ji,%20I%20want%20to%20know%20more%20about%20Jaisalmer%20tour%20packages." class="inline-block bg-green-500 text-white px-4 py-2 rounded-lg font-semibold mt-2">
+                    <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp Us Now
+                </a>
+            </div>
+        </div>
+        <div class="text-center text-xs text-gray-500 mt-8 border-t border-gray-800 pt-4">
+            &copy; 2026 THARYATRA - Tour & Travels. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Sticky Floating WhatsApp Button -->
+    <a href="https://wa.me/917877858851?text=Hello%20Sawai%20Singh%20Ji,%20I%20want%20to%20know%20more%20about%20Jaisalmer%20tour%20packages." target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 z-50 text-3xl flex items-center justify-center w-14 h-14">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript For WhatsApp Dynamic Routing in English -->
+    <script>
+        function sendToWhatsApp() {
+            var name = document.getElementById('custName').value;
+            var date = document.getElementById('tourDate').value;
+            var guests = document.getElementById('guestCount').value;
+            var service = document.getElementById('serviceType').value;
+
+            if(!name || !date || !guests) {
+                alert('Please fill all details!');
+                return;
+            }
+
+            var phone = "917877858851";
+            var message = "Hello Sawai Singh Ji (THARYATRA),%0A%0A" +
+                          "I want to know more about Jaisalmer tour packages. Here are my details:%0A" +
+                          "*Name:* " + encodeURIComponent(name) + "%0A" +
+                          "*Arrival Date:* " + encodeURIComponent(date) + "%0A" +
+                          "*Total Guests:* " + encodeURIComponent(guests) + "%0A" +
+                          "*Service Required:* " + encodeURIComponent(service) + "%0A%0A" +
+                          "Please share the best price quote with me.";
+
+            window.open("https://wa.me/" + phone + "?text=" + message, '_blank');
+        }
+    </script>
 </body>
 </html>
